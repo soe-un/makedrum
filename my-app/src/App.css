@@ -1,3 +1,6 @@
+body {
+  font-family: "Noto Sans KR", serif;
+}
 .App {
   text-align: center;
   background-color: #282c34;
@@ -8,6 +11,34 @@
   justify-content: center;
   color: white;
 
+  button {
+    background-color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    &:hover {
+      opacity: 0.8;
+    }
+    &.download {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    &.back {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+
+  input {
+    background-color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+
   .background {
     width: 100%;
     height: 100%;
@@ -15,20 +46,40 @@
     background-size: cover;
     background-image: url("../public/Old-Wooden-Jetty.jpg");
 
+    .name {
+      position: absolute;
+      font-size: 2rem;
+      z-index: 2;
+      bottom: 47vh;
+      left: 47.5vw;
+      transform: translateX(-50%);
+    }
+
     .phone {
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 40vw;
+      height: 70vh;
     }
     .drum {
       overflow: hidden;
       width: 15vw;
       position: absolute;
       right: 2%;
-      bottom: 7%;
+      bottom: 8%;
       transform: rotate(-75deg);
+    }
+    .drum-wave {
+      overflow: hidden;
+      width: 15vw;
+      height: 5vw;
+      position: absolute;
+      right: 2%;
+      bottom: 12%;
+      background-image: url("../public/Old-Wooden-Jetty.jpg");
+      background-position: 900px 1245px;
+      opacity: 0.7;
     }
   }
 }
